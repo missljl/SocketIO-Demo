@@ -1,0 +1,8 @@
+source 'https://git.coding.net/hging/Specs.git'
+use_frameworks!
+platform :ios, '8.0'
+
+target “SocketIO” do
+
+pod 'Socket.IO-Client-Swift'
+end

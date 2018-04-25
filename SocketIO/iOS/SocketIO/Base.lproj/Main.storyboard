@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fYj-dA-LpP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGW-e9-K8D">
+                                <rect key="frame" x="328" y="637" width="31" height="30"/>
+                                <state key="normal" title="发送"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MtL-KD-gjl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25Z-Qa-9n2">
+                                <rect key="frame" x="0.0" y="627" width="328" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FJy-DC-Lic"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fYj-dA-LpP" secondAttribute="trailing" id="2Pg-Gp-7RS"/>
+                            <constraint firstItem="25Z-Qa-9n2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="37Q-mG-nut"/>
+                            <constraint firstItem="fYj-dA-LpP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Hk-x8-rUM"/>
+                            <constraint firstItem="25Z-Qa-9n2" firstAttribute="top" secondItem="fYj-dA-LpP" secondAttribute="bottom" id="8JL-ms-5y3"/>
+                            <constraint firstItem="fYj-dA-LpP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jso-UZ-2YD"/>
+                            <constraint firstItem="DGW-e9-K8D" firstAttribute="leading" secondItem="25Z-Qa-9n2" secondAttribute="trailing" id="LEs-8M-Iur"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DGW-e9-K8D" secondAttribute="bottom" id="UIz-nn-lfv"/>
+                            <constraint firstItem="DGW-e9-K8D" firstAttribute="leading" secondItem="25Z-Qa-9n2" secondAttribute="trailing" id="Vg2-Ky-K4u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DGW-e9-K8D" secondAttribute="trailing" id="gfL-gJ-tmG"/>
+                            <constraint firstItem="25Z-Qa-9n2" firstAttribute="top" secondItem="fYj-dA-LpP" secondAttribute="bottom" id="rYe-gg-iC9"/>
+                            <constraint firstAttribute="bottom" secondItem="25Z-Qa-9n2" secondAttribute="bottom" id="xZw-bl-JiC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MessagetableView" destination="fYj-dA-LpP" id="xSW-lX-bDC"/>
+                        <outlet property="inputText" destination="25Z-Qa-9n2" id="v6A-vF-fZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
